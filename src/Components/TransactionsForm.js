@@ -7,12 +7,12 @@ const TransactionsForm = ({ addTransaction }) => {
     description: "",
   });
   const onChangeHandler = (e) => {
-    setValueForm({...valueForm,[e.target.name]:e.target.value})
+    setValueForm({ ...valueForm, [e.target.name]: e.target.value });
   };
-  const onSubmitHandler=(e)=>{
+  const onSubmitHandler = (e) => {
     e.preventDefault();
     addTransaction(valueForm);
-  }
+  };
   return (
     <form onSubmit={onSubmitHandler}>
       <input
@@ -32,18 +32,20 @@ const TransactionsForm = ({ addTransaction }) => {
           type="radio"
           name="type"
           value="expense"
+          id="expense"
           onChange={onChangeHandler}
           checked={valueForm.type === "expense"}
         />
-        <label for="expense">Expense</label>
+        <label htmlFor="expense">Expense</label>
         <input
           type="radio"
           name="type"
           value="income"
+          id="income"
           onChange={onChangeHandler}
           checked={valueForm.type === "income"}
         />
-        <label for="income">Income</label>
+        <label htmlFor="income">Income</label>
       </div>
       <button type="submit" className="btn">
         Add Transactions

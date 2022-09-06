@@ -6,7 +6,7 @@ const OverView = ({ income, expense, addTransaction }) => {
   return (
     <>
       <div className="balance">
-        <p>Balance:</p>
+        <p>Balance:{income - expense}</p>
         <button
           type="submit"
           className="btn"
@@ -19,8 +19,14 @@ const OverView = ({ income, expense, addTransaction }) => {
       </div>
       {isShow && <TransactionsForm addTransaction={addTransaction} />}
       <div className="expenseSection">
-        <div className="expenseSection__box">Expense</div>
-        <div className="expenseSection__box">Income</div>
+        <div className="expenseSection__box">
+          <p>Expense</p>
+          <p style={{ color: "red" }}>{expense}$</p>
+        </div>
+        <div className="expenseSection__box">
+          <p>Income</p>
+          <p style={{ color: "green" }}>{income}$</p>
+        </div>
       </div>
     </>
   );
