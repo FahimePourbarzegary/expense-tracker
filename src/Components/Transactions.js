@@ -1,17 +1,15 @@
 import TransactionList from "./TransactionList";
 
-const Transactions = ({ transactions }) => {
+const Transactions = ({ transactions, filterTransactions, filteredTnx }) => {
   return (
     <div className="transactions-container">
       <h3>Transactions</h3>
-      <input
-        type="text"
-        name="search"
-        placeholder="Search.."
-        onChange={() => {}}
-      />
       <div className="transactions">
-        <TransactionList transactions={transactions} />
+        <TransactionList
+          transactions={transactions}
+          filterTransactions={filterTransactions}
+          filteredTnx={filteredTnx}
+        />
       </div>
     </div>
   );

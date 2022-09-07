@@ -31,8 +31,11 @@
   flex-direction: column;
 }
 .transaction {
+  display: flex;
+  justify-content: space-between;
   margin-top: 0.5rem;
   border-radius: 2px;
+  padding: 0px 10px;
   box-shadow: 1px 1px 3px #a3a3a385;
   border-right: 2px solid red;
 }

@@ -17,7 +17,8 @@ const OverView = ({ income, expense, addTransaction }) => {
           {isShow ? "Cancel" : "Add"}
         </button>
       </div>
-      {isShow && <TransactionsForm addTransaction={addTransaction} />}
+      {isShow && <TransactionsForm addTransaction={addTransaction} 
+      isShow={setIsShow}/>}
       <div className="expenseSection">
         <div className="expenseSection__box">
           <p>Expense</p>
